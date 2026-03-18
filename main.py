@@ -11,7 +11,7 @@ from src.codeforces import pick_problems
 from src.editorial import get_editorial, extract_problem_keypoints, explain_editorial_detail
 from src.storage import load_sent_ids, mark_as_sent
 from src.formatter import format_problem_card, format_markdown
-from src.push import telegram, feishu, wechat, ruliu
+from src.push import telegram, feishu, wechat
 
 logging.basicConfig(
     level=logging.INFO,
@@ -36,7 +36,6 @@ def _override_from_env(cfg: dict):
         "TG_CHAT_ID": ("push", "telegram", "chat_id"),
         "FEISHU_WEBHOOK": ("push", "feishu", "webhook_url"),
         "WECHAT_KEY": ("push", "wechat", "server_chan_key"),
-        "RULIU_WEBHOOK": ("push", "ruliu", "webhook_url"),
         "LLM_API_KEY": ("llm", "api_key"),
     }
     for env_var, keys in env_map.items():
@@ -98,7 +97,6 @@ def run(config_path: str = None):
         "telegram": telegram,
         "feishu": feishu,
         "wechat": wechat,
-        "ruliu": ruliu,
     }
 
     sent_any = False

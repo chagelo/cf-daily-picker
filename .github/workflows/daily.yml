@@ -31,7 +31,6 @@ jobs:
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           WECHAT_KEY: ${{ secrets.WECHAT_KEY }}
-          RULIU_WEBHOOK: ${{ secrets.RULIU_WEBHOOK }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
         run: python main.py
 

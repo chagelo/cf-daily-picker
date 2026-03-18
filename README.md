@@ -1,6 +1,6 @@
 # CF Daily Picker
 
-每日自动从 Codeforces 抓取指定难度的题目及题解，推送到 Telegram / 飞书 / 微信 / 入流。
+每日自动从 Codeforces 抓取指定难度的题目及题解，推送到 Telegram / 飞书 / 微信。
 
 ## 功能
 
@@ -9,7 +9,7 @@
 - **LLM 增强**（可选）
   - 题面要点提取：从英文题面中提炼题意、约束、边界陷阱
   - 题解详细解析：对题解补充推导过程、举例、易错点
-- **多渠道推送** — Telegram / 飞书 / 微信（Server酱）/ 入流
+- **多渠道推送** — Telegram / 飞书 / 微信（Server酱）
 - **自动去重** — 已推送题目记录在 `data/sent.json`，不会重复推送
 - **GitHub Actions** — 每天北京时间 20:00 自动运行，零运维
 
@@ -58,9 +58,6 @@ push:
   wechat:
     enabled: false
     server_chan_key: ""
-  ruliu:
-    enabled: false
-    webhook_url: ""
 ```
 
 ### 3. 本地运行
@@ -82,7 +79,6 @@ python main.py
    | `TG_CHAT_ID` | Telegram Chat ID |
    | `FEISHU_WEBHOOK` | 飞书机器人 Webhook URL |
    | `WECHAT_KEY` | Server酱 SendKey |
-   | `RULIU_WEBHOOK` | 入流 Webhook URL |
    | `LLM_API_KEY` | LLM API Key |
 
 3. 每天 UTC 12:00（北京时间 20:00）自动运行，也可在 Actions 页面手动触发
@@ -105,8 +101,7 @@ cf-daily-picker/
     └── push/
         ├── telegram.py
         ├── feishu.py
-        ├── wechat.py
-        └── ruliu.py
+        └── wechat.py
 ```
 
 ## License

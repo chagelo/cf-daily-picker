@@ -38,9 +38,6 @@ push:
     enabled: false
     # Server酱 SendKey
     server_chan_key: ""
-  ruliu:
-    enabled: false
-    webhook_url: ""
 
 schedule:
   # GitHub Actions cron 表达式 (UTC 时间，北京时间 20:00 = UTC 12:00)
