@@ -1,0 +1,47 @@
+codeforces:
+  # 难度配置：单值(如 1000)或区间(如 [1000, 1400])
+  rating: 1000
+  # 开启后每天在 rating_random_range 内随机选一个难度区间
+  random_rating: false
+  rating_random_range: [800, 1600]
+  # 每天抓取题目数
+  daily_count: 2
+
+editorial:
+  # 是否抓取官方题解
+  official: true
+  # LLM 兜底生成题解（需要配置 llm 部分）
+  llm_fallback: false
+  # 两者都开时优先使用官方题解
+
+enhance:
+  # 是否用 LLM 提取题面要点（输入/输出含义、约束条件、关键信息）
+  extract_problem_keypoints: false
+  # 是否用 LLM 对题解做更详细的解释（补充推导过程、举例说明等）
+  explain_editorial: false
+
+llm:
+  # 支持 openai 兼容接口
+  api_base: "https://api.openai.com/v1"
+  api_key: ""
+  model: "gpt-4o-mini"
+
+push:
+  telegram:
+    enabled: false
+    bot_token: ""
+    chat_id: ""
+  feishu:
+    enabled: false
+    webhook_url: ""
+  wechat:
+    enabled: false
+    # Server酱 SendKey
+    server_chan_key: ""
+  ruliu:
+    enabled: false
+    webhook_url: ""
+
+schedule:
+  # GitHub Actions cron 表达式 (UTC 时间，北京时间 20:00 = UTC 12:00)
+  cron: "0 12 * * *"
