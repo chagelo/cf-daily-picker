@@ -7,11 +7,14 @@ import requests
 
 
 CF_API_PROBLEMS = "https://codeforces.com/api/problemset.problems"
+CF_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+}
 
 
 def fetch_all_problems() -> list[dict]:
     """Fetch all problems from Codeforces API."""
-    resp = requests.get(CF_API_PROBLEMS, timeout=30)
+    resp = requests.get(CF_API_PROBLEMS, headers=CF_HEADERS, timeout=30)
     resp.raise_for_status()
     data = resp.json()
     if data.get("status") != "OK":

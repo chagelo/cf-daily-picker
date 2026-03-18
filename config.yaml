@@ -16,19 +16,19 @@ editorial:
 
 enhance:
   # 是否用 LLM 提取题面要点（输入/输出含义、约束条件、关键信息）
-  extract_problem_keypoints: false
+  extract_problem_keypoints: true
   # 是否用 LLM 对题解做更详细的解释（补充推导过程、举例说明等）
-  explain_editorial: false
+  explain_editorial: true
 
 llm:
   # 支持 openai 兼容接口
-  api_base: "https://api.openai.com/v1"
+  api_base: "https://api.deepseek.com/v1"
   api_key: ""
-  model: "gpt-4o-mini"
+  model: "deepseek-chat"
 
 push:
   telegram:
-    enabled: false
+    enabled: true
     bot_token: ""
     chat_id: ""
   feishu:

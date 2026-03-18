@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 SERVERCHAN_URL = "https://sctapi.ftqq.com/{key}.send"
 
 
-def send(cfg: dict, markdown_text: str) -> bool:
+def send(cfg: dict, markdown_text: str, **kwargs) -> bool:
     """Send message to WeChat via Server酱.
 
     cfg should contain: server_chan_key

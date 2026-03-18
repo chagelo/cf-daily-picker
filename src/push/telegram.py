@@ -1,14 +1,16 @@
 """Telegram push via Bot API."""
 
 import logging
+import os
+import tempfile
 
 import requests
 
 logger = logging.getLogger(__name__)
 
 
-def send(cfg: dict, markdown_text: str) -> bool:
-    """Send message to Telegram via Bot API.
+def send(cfg: dict, summary_text: str, html_content: str = None) -> bool:
+    """Send summary message + optional HTML file to Telegram.
 
     cfg should contain: bot_token, chat_id
     """
@@ -19,48 +21,59 @@ def send(cfg: dict, markdown_text: str) -> bool:
         logger.warning("Telegram not configured, skipping")
         return False
 
-    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-
-    # Telegram has a 4096 char limit per message, split if needed
-    chunks = _split_message(markdown_text, 4000)
     success = True
-    for chunk in chunks:
+
+    # 1. Send text summary
+    msg_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    try:
+        resp = requests.post(
+            msg_url,
+            json={
+                "chat_id": chat_id,
+                "text": summary_text,
+                "disable_web_page_preview": True,
+            },
+            timeout=15,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        if not data.get("ok"):
+            logger.error("Telegram sendMessage error: %s", data.get("description"))
+            success = False
+    except Exception as e:
+        logger.error("Telegram sendMessage failed: %s", e)
+        success = False
+
+    # 2. Send HTML file as document
+    if html_content:
+        doc_url = f"https://api.telegram.org/bot{bot_token}/sendDocument"
         try:
-            resp = requests.post(
-                url,
-                json={
-                    "chat_id": chat_id,
-                    "text": chunk,
-                    "parse_mode": "Markdown",
-                    "disable_web_page_preview": False,
-                },
-                timeout=15,
-            )
+            with tempfile.NamedTemporaryFile(
+                mode="w", suffix=".html", prefix="cf_daily_", delete=False, encoding="utf-8"
+            ) as f:
+                f.write(html_content)
+                tmp_path = f.name
+
+            with open(tmp_path, "rb") as f:
+                resp = requests.post(
+                    doc_url,
+                    data={
+                        "chat_id": chat_id,
+                        "caption": "CF 每日练习 - 完整题解",
+                    },
+                    files={"document": ("cf_daily.html", f, "text/html")},
+                    timeout=30,
+                )
             resp.raise_for_status()
             data = resp.json()
             if not data.get("ok"):
-                logger.error("Telegram API error: %s", data.get("description"))
+                logger.error("Telegram sendDocument error: %s", data.get("description"))
                 success = False
         except Exception as e:
-            logger.error("Telegram send failed: %s", e)
+            logger.error("Telegram sendDocument failed: %s", e)
             success = False
+        finally:
+            if os.path.exists(tmp_path):
+                os.unlink(tmp_path)
 
     return success
-
-
-def _split_message(text: str, max_len: int) -> list[str]:
-    """Split long text into chunks."""
-    if len(text) <= max_len:
-        return [text]
-    chunks = []
-    while text:
-        if len(text) <= max_len:
-            chunks.append(text)
-            break
-        # Try to split at last newline before max_len
-        idx = text.rfind("\n", 0, max_len)
-        if idx == -1:
-            idx = max_len
-        chunks.append(text[:idx])
-        text = text[idx:].lstrip("\n")
-    return chunks

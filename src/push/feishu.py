@@ -7,7 +7,7 @@ import requests
 logger = logging.getLogger(__name__)
 
 
-def send(cfg: dict, markdown_text: str) -> bool:
+def send(cfg: dict, markdown_text: str, **kwargs) -> bool:
     """Send message to Feishu via webhook.
 
     cfg should contain: webhook_url

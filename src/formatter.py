@@ -52,7 +52,21 @@ def format_markdown(cards: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def format_plain_text(cards: list[dict]) -> str:
+def format_summary(cards: list[dict]) -> str:
+    """Format a brief text summary for Telegram message (no editorial content)."""
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    lines = [f"CF 每日练习 ({date_str})\n"]
+
+    for i, card in enumerate(cards, 1):
+        lines.append(f"题目 {i}: {card['title']}")
+        lines.append(f"难度: {card['rating']}")
+        tags = ", ".join(card["tags"]) if card.get("tags") else "无"
+        lines.append(f"标签: {tags}")
+        lines.append(f"链接: {card['url']}")
+        lines.append("")
+
+    lines.append("完整题解见附件")
+    return "\n".join(lines)
     """Format cards as plain text (for channels that don't support Markdown)."""
     date_str = datetime.now().strftime("%Y-%m-%d")
     lines = [f"CF 每日练习 ({date_str})\n{'=' * 30}\n"]

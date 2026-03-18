@@ -15,6 +15,9 @@ logger = logging.getLogger(__name__)
 
 CF_CONTEST_URL = "https://codeforces.com/contest/{contest_id}"
 CF_BLOG_URL = "https://codeforces.com/blog/entry/{blog_id}"
+CF_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -63,7 +66,7 @@ def _find_editorial_blog_id(contest_id: int) -> int | None:
     # or linked from contest page. Try common patterns.
     materials_url = f"https://codeforces.com/contest/{contest_id}"
     try:
-        resp = requests.get(materials_url, timeout=15)
+        resp = requests.get(materials_url, headers=CF_HEADERS, timeout=30)
         resp.raise_for_status()
     except requests.RequestException:
         return None
@@ -84,7 +87,7 @@ def _scrape_blog_content(blog_id: int) -> str | None:
     """Scrape the content of a Codeforces blog entry."""
     url = f"https://codeforces.com/blog/entry/{blog_id}"
     try:
-        resp = requests.get(url, timeout=15)
+        resp = requests.get(url, headers=CF_HEADERS, timeout=30)
         resp.raise_for_status()
     except requests.RequestException as e:
         logger.warning("Failed to fetch blog %d: %s", blog_id, e)
@@ -204,7 +207,7 @@ def _scrape_problem_statement(contest_id: int, problem_index: str) -> str | None
     """Scrape the problem statement text from Codeforces."""
     url = f"https://codeforces.com/contest/{contest_id}/problem/{problem_index}"
     try:
-        resp = requests.get(url, timeout=15)
+        resp = requests.get(url, headers=CF_HEADERS, timeout=30)
         resp.raise_for_status()
     except requests.RequestException as e:
         logger.warning("Failed to fetch problem page %d%s: %s", contest_id, problem_index, e)
@@ -246,6 +249,36 @@ def extract_problem_keypoints(problem: dict, llm_cfg: dict) -> str | None:
     return _call_llm(
         llm_cfg,
         "你是一个竞赛编程专家，擅长从英文题面中快速提炼关键信息并用中文呈现。",
+        user_prompt,
+    )
+
+
+def translate_editorial(problem: dict, editorial: str, llm_cfg: dict) -> str | None:
+    """Use LLM to translate editorial to Chinese and clean up formatting.
+
+    Handles:
+      - English → Chinese translation
+      - Keep LaTeX formulas in $...$ / $$...$$ format for KaTeX rendering
+      - Fix garbled text and formatting issues
+    """
+    problem_name = problem.get("name", "Unknown")
+    contest_id = problem.get("contestId", "")
+    index = problem.get("index", "")
+
+    user_prompt = (
+        f"题目: {contest_id}{index} - {problem_name}\n\n"
+        f"以下是这道题的英文官方题解（可能含有 LaTeX 公式和格式问题）：\n\n"
+        f"{editorial}\n\n"
+        f"请将上述题解翻译为中文，同时：\n"
+        f"1. 准确翻译算法术语（如 greedy → 贪心，dp → 动态规划）\n"
+        f"2. 保留所有数学公式为 LaTeX 格式，行内公式用 $...$，行间公式用 $$...$$\n"
+        f"3. 修复可能的格式错乱，保持段落结构清晰\n"
+        f"4. 保留代码块不翻译\n"
+        f"5. 使用 Markdown 格式输出"
+    )
+    return _call_llm(
+        llm_cfg,
+        "你是一个竞赛编程翻译专家，擅长将英文算法题解准确翻译为中文，熟悉算法竞赛术语。输出中所有数学公式必须保留为 LaTeX 格式（$...$）。",
         user_prompt,
     )
 

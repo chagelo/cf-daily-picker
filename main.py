@@ -8,9 +8,10 @@ import os
 import yaml
 
 from src.codeforces import pick_problems
-from src.editorial import get_editorial, extract_problem_keypoints, explain_editorial_detail
+from src.editorial import get_editorial, extract_problem_keypoints, translate_editorial, explain_editorial_detail
 from src.storage import load_sent_ids, mark_as_sent
-from src.formatter import format_problem_card, format_markdown
+from src.formatter import format_problem_card, format_markdown, format_summary
+from src.renderer import render_html
 from src.push import telegram, feishu, wechat
 
 logging.basicConfig(
@@ -73,6 +74,13 @@ def run(config_path: str = None):
     for p in problems:
         editorial = get_editorial(p, editorial_cfg, llm_cfg)
 
+        # Always translate editorial to Chinese and fix formatting
+        if editorial != "暂无题解":
+            logger.info("Translating editorial for %d%s...", p["contestId"], p["index"])
+            translated = translate_editorial(p, editorial, llm_cfg)
+            if translated:
+                editorial = f"[中文题解]\n{translated}"
+
         # Optional: LLM extracts key points from problem statement
         keypoints = None
         if enhance_cfg.get("extract_problem_keypoints", False):
@@ -88,9 +96,11 @@ def run(config_path: str = None):
         card = format_problem_card(p, editorial, keypoints, detailed)
         cards.append(card)
 
-    # 3. Format message
-    message = format_markdown(cards)
-    logger.info("Message formatted (%d chars)", len(message))
+    # 3. Format messages
+    summary = format_summary(cards)
+    html_content = render_html(cards)
+    markdown_message = format_markdown(cards)
+    logger.info("Messages formatted (summary: %d chars, html: %d chars)", len(summary), len(html_content))
 
     # 4. Push to enabled channels
     channels = {
@@ -104,7 +114,10 @@ def run(config_path: str = None):
         ch_cfg = push_cfg.get(name, {})
         if ch_cfg.get("enabled", False):
             logger.info("Pushing to %s...", name)
-            ok = module.send(ch_cfg, message)
+            if name == "telegram":
+                ok = module.send(ch_cfg, summary, html_content)
+            else:
+                ok = module.send(ch_cfg, markdown_message)
             if ok:
                 logger.info("  %s: success", name)
                 sent_any = True
@@ -112,8 +125,17 @@ def run(config_path: str = None):
                 logger.error("  %s: failed", name)
 
     if not sent_any:
-        logger.warning("No push channel succeeded or enabled, printing to stdout")
-        print(message)
+        logger.warning("No push channel succeeded or enabled, saving locally")
+        print(summary)
+        # Save HTML file locally for preview
+        out_dir = os.path.join(os.path.dirname(__file__), "output")
+        os.makedirs(out_dir, exist_ok=True)
+        from datetime import datetime
+        date_str = datetime.now().strftime("%Y-%m-%d")
+        html_path = os.path.join(out_dir, f"cf_daily_{date_str}.html")
+        with open(html_path, "w", encoding="utf-8") as f:
+            f.write(html_content)
+        logger.info("HTML saved to %s", html_path)
 
     # 5. Mark as sent
     mark_as_sent(problems)
