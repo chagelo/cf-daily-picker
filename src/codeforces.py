@@ -1,9 +1,12 @@
 """Codeforces problem fetcher using official API."""
 
+import logging
 import random
 from typing import Union
 
 import requests
+
+logger = logging.getLogger(__name__)
 
 
 CF_BASE = "https://codeforces.com"
@@ -29,9 +32,20 @@ def cf_url(path: str) -> str:
 
 def fetch_all_problems() -> list[dict]:
     """Fetch all problems from Codeforces API."""
-    resp = requests.get(cf_url("/api/problemset.problems"), headers=CF_HEADERS, timeout=30)
+    url = cf_url("/api/problemset.problems")
+    logger.info("Fetching problems from: %s", url)
+    resp = requests.get(url, headers=CF_HEADERS, timeout=30)
     resp.raise_for_status()
-    data = resp.json()
+    if not resp.text:
+        raise RuntimeError(f"Empty response from {url} (status {resp.status_code})")
+    try:
+        data = resp.json()
+    except Exception:
+        raise RuntimeError(
+            f"Invalid JSON from {url} (status {resp.status_code}, "
+            f"content-type: {resp.headers.get('content-type')}, "
+            f"body[:200]: {resp.text[:200]})"
+        )
     if data.get("status") != "OK":
         raise RuntimeError(f"Codeforces API error: {data.get('comment', 'unknown')}")
     return data["result"]["problems"]
