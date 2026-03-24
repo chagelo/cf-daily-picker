@@ -65,26 +65,35 @@ def run(config_path: str = None):
     exclude_ids = load_sent_ids()
     logger.info("Already sent %d problems, picking new ones...", len(exclude_ids))
 
-    problems = pick_problems(cf_cfg, exclude_ids)
-    if not problems:
+    candidates = pick_problems(cf_cfg, exclude_ids)
+    if not candidates:
         logger.warning("No suitable problems found, exiting")
         return
 
-    logger.info("Picked %d problems:", len(problems))
-    for p in problems:
-        logger.info("  %d%s - %s (rating %s)", p["contestId"], p["index"], p["name"], p.get("rating"))
+    count = cf_cfg.get("daily_count", 2)
+    logger.info("Found %d candidates, need %d with editorials", len(candidates), count)
 
-    # 2. Get editorials + LLM enhancements
+    # 2. Get editorials + LLM enhancements, skip problems without editorial
     cards = []
-    for p in problems:
+    problems = []
+    for p in candidates:
+        if len(cards) >= count:
+            break
+
         editorial = get_editorial(p, editorial_cfg, llm_cfg)
 
+        if editorial == "暂无题解":
+            logger.info("No editorial for %d%s - %s, skipping", p["contestId"], p["index"], p["name"])
+            continue
+
+        logger.info("Picked %d%s - %s (rating %s)", p["contestId"], p["index"], p["name"], p.get("rating"))
+        problems.append(p)
+
         # Always translate editorial to Chinese and fix formatting
-        if editorial != "暂无题解":
-            logger.info("Translating editorial for %d%s...", p["contestId"], p["index"])
-            translated = translate_editorial(p, editorial, llm_cfg)
-            if translated:
-                editorial = f"[中文题解]\n{translated}"
+        logger.info("Translating editorial for %d%s...", p["contestId"], p["index"])
+        translated = translate_editorial(p, editorial, llm_cfg)
+        if translated:
+            editorial = f"[中文题解]\n{translated}"
 
         # Optional: LLM extracts key points from problem statement
         keypoints = None
@@ -94,12 +103,18 @@ def run(config_path: str = None):
 
         # Optional: LLM explains editorial in more detail
         detailed = None
-        if enhance_cfg.get("explain_editorial", False) and editorial != "暂无题解":
+        if enhance_cfg.get("explain_editorial", False):
             logger.info("Generating detailed explanation for %d%s...", p["contestId"], p["index"])
             detailed = explain_editorial_detail(p, editorial, llm_cfg)
 
         card = format_problem_card(p, editorial, keypoints, detailed)
         cards.append(card)
+
+    if not cards:
+        logger.warning("Could not find any problems with editorials, exiting")
+        return
+
+    logger.info("Final selection: %d problems with editorials", len(cards))
 
     # 3. Format messages
     summary = format_summary(cards)

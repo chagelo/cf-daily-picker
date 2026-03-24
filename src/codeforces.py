@@ -91,13 +91,14 @@ def filter_problems(
 
 
 def pick_problems(cfg: dict, exclude_ids: set[str]) -> list[dict]:
-    """Main entry: fetch, filter, and pick N problems."""
+    """Main entry: fetch, filter, and return shuffled candidate list.
+
+    Returns all matching candidates in random order.
+    Caller is responsible for picking the desired count
+    (e.g. skipping problems without editorials).
+    """
     all_problems = fetch_all_problems()
     rating_range = resolve_rating(cfg)
     candidates = filter_problems(all_problems, rating_range, exclude_ids)
-
-    count = cfg.get("daily_count", 2)
-    if len(candidates) <= count:
-        return candidates
-
-    return random.sample(candidates, count)
+    random.shuffle(candidates)
+    return candidates
