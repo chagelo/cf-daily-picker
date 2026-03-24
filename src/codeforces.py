@@ -6,15 +6,30 @@ from typing import Union
 import requests
 
 
-CF_API_PROBLEMS = "https://codeforces.com/api/problemset.problems"
+CF_BASE = "https://codeforces.com"
 CF_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
 }
 
+# Global proxy base, set by main.py from config
+_proxy_base = ""
+
+
+def set_proxy(proxy_base: str):
+    """Set proxy base URL. Called from main.py during init."""
+    global _proxy_base
+    _proxy_base = (proxy_base or "").rstrip("/")
+
+
+def cf_url(path: str) -> str:
+    """Build a Codeforces URL, using proxy if configured."""
+    base = _proxy_base if _proxy_base else CF_BASE
+    return f"{base}{path}"
+
 
 def fetch_all_problems() -> list[dict]:
     """Fetch all problems from Codeforces API."""
-    resp = requests.get(CF_API_PROBLEMS, headers=CF_HEADERS, timeout=30)
+    resp = requests.get(cf_url("/api/problemset.problems"), headers=CF_HEADERS, timeout=30)
     resp.raise_for_status()
     data = resp.json()
     if data.get("status") != "OK":

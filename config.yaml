@@ -6,6 +6,9 @@ codeforces:
   rating_random_range: [800, 1600]
   # 每天抓取题目数
   daily_count: 2
+  # Cloudflare Workers 代理地址（解决 GitHub Actions IP 被 CF 封锁的问题）
+  # 留空则直接访问 codeforces.com
+  proxy_base: ""
 
 editorial:
   # 是否抓取官方题解

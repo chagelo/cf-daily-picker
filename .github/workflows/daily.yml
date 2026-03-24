@@ -32,6 +32,7 @@ jobs:
           FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
           WECHAT_KEY: ${{ secrets.WECHAT_KEY }}
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          CF_PROXY_BASE: ${{ vars.CF_PROXY_BASE }}
         run: python main.py
 
       - name: Commit sent records

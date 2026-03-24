@@ -11,13 +11,9 @@ import logging
 import requests
 from bs4 import BeautifulSoup
 
-logger = logging.getLogger(__name__)
+from src.codeforces import cf_url, CF_HEADERS
 
-CF_CONTEST_URL = "https://codeforces.com/contest/{contest_id}"
-CF_BLOG_URL = "https://codeforces.com/blog/entry/{blog_id}"
-CF_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-}
+logger = logging.getLogger(__name__)
 
 
 # ---------------------------------------------------------------------------
@@ -61,10 +57,9 @@ def _call_llm(llm_cfg: dict, system_prompt: str, user_prompt: str) -> str | None
 
 def _find_editorial_blog_id(contest_id: int) -> int | None:
     """Try to find the editorial blog entry ID from the contest materials page."""
-    url = f"https://codeforces.com/blog/entry/{contest_id}"
     # Codeforces editorial links are usually posted on contest announcement
     # or linked from contest page. Try common patterns.
-    materials_url = f"https://codeforces.com/contest/{contest_id}"
+    materials_url = cf_url(f"/contest/{contest_id}")
     try:
         resp = requests.get(materials_url, headers=CF_HEADERS, timeout=30)
         resp.raise_for_status()
@@ -85,7 +80,7 @@ def _find_editorial_blog_id(contest_id: int) -> int | None:
 
 def _scrape_blog_content(blog_id: int) -> str | None:
     """Scrape the content of a Codeforces blog entry."""
-    url = f"https://codeforces.com/blog/entry/{blog_id}"
+    url = cf_url(f"/blog/entry/{blog_id}")
     try:
         resp = requests.get(url, headers=CF_HEADERS, timeout=30)
         resp.raise_for_status()
@@ -205,7 +200,7 @@ def get_editorial(problem: dict, editorial_cfg: dict, llm_cfg: dict) -> str:
 
 def _scrape_problem_statement(contest_id: int, problem_index: str) -> str | None:
     """Scrape the problem statement text from Codeforces."""
-    url = f"https://codeforces.com/contest/{contest_id}/problem/{problem_index}"
+    url = cf_url(f"/contest/{contest_id}/problem/{problem_index}")
     try:
         resp = requests.get(url, headers=CF_HEADERS, timeout=30)
         resp.raise_for_status()

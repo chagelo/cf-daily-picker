@@ -7,7 +7,7 @@ import os
 
 import yaml
 
-from src.codeforces import pick_problems
+from src.codeforces import pick_problems, set_proxy
 from src.editorial import get_editorial, extract_problem_keypoints, translate_editorial, explain_editorial_detail
 from src.storage import load_sent_ids, mark_as_sent
 from src.formatter import format_problem_card, format_markdown, format_summary
@@ -38,6 +38,7 @@ def _override_from_env(cfg: dict):
         "FEISHU_WEBHOOK": ("push", "feishu", "webhook_url"),
         "WECHAT_KEY": ("push", "wechat", "server_chan_key"),
         "LLM_API_KEY": ("llm", "api_key"),
+        "CF_PROXY_BASE": ("codeforces", "proxy_base"),
     }
     for env_var, keys in env_map.items():
         val = os.environ.get(env_var)
@@ -51,6 +52,10 @@ def _override_from_env(cfg: dict):
 def run(config_path: str = None):
     cfg = load_config(config_path)
     cf_cfg = cfg.get("codeforces", {})
+
+    # Initialize proxy for Codeforces requests
+    set_proxy(cf_cfg.get("proxy_base", ""))
+
     editorial_cfg = cfg.get("editorial", {})
     enhance_cfg = cfg.get("enhance", {})
     llm_cfg = cfg.get("llm", {})
