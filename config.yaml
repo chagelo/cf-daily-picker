@@ -1,6 +1,6 @@
 codeforces:
   # 难度配置：单值(如 1000)或区间(如 [1000, 1400])
-  rating: 1000
+  rating: 1500
   # 开启后每天在 rating_random_range 内随机选一个难度区间
   random_rating: false
   rating_random_range: [800, 1600]
