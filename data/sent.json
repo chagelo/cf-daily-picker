@@ -274,5 +274,17 @@
     "name": "Meaningless Operations",
     "rating": 1500,
     "sent_at": "2026-04-16T13:51:06.095160"
+  },
+  {
+    "id": "1133-D",
+    "name": "Zero Quantity Maximization",
+    "rating": 1500,
+    "sent_at": "2026-04-17T13:26:17.985973"
+  },
+  {
+    "id": "1400-C",
+    "name": "Binary String Reconstruction",
+    "rating": 1500,
+    "sent_at": "2026-04-17T13:26:17.985983"
   }
 ]
