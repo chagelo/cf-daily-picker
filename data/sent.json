@@ -286,5 +286,17 @@
     "name": "Binary String Reconstruction",
     "rating": 1500,
     "sent_at": "2026-04-17T13:26:17.985983"
+  },
+  {
+    "id": "1673-C",
+    "name": "Palindrome Basis",
+    "rating": 1500,
+    "sent_at": "2026-04-18T13:08:27.823987"
+  },
+  {
+    "id": "977-E",
+    "name": "Cyclic Components",
+    "rating": 1500,
+    "sent_at": "2026-04-18T13:08:27.823997"
   }
 ]
