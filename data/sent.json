@@ -298,5 +298,17 @@
     "name": "Cyclic Components",
     "rating": 1500,
     "sent_at": "2026-04-18T13:08:27.823997"
+  },
+  {
+    "id": "1804-C",
+    "name": "Pull Your Luck",
+    "rating": 1500,
+    "sent_at": "2026-04-19T13:07:22.050068"
+  },
+  {
+    "id": "976-C",
+    "name": "Nested Segments",
+    "rating": 1500,
+    "sent_at": "2026-04-19T13:07:22.050079"
   }
 ]
