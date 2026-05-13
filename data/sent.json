@@ -430,5 +430,17 @@
     "name": "Hacking Numbers (Easy Version)",
     "rating": 1500,
     "sent_at": "2026-05-12T14:30:08.830650"
+  },
+  {
+    "id": "1765-K",
+    "name": "Torus Path",
+    "rating": 1500,
+    "sent_at": "2026-05-13T14:38:38.048163"
+  },
+  {
+    "id": "264-B",
+    "name": "Good Sequences",
+    "rating": 1500,
+    "sent_at": "2026-05-13T14:38:38.048175"
   }
 ]
