@@ -490,5 +490,17 @@
     "name": "Pride",
     "rating": 1500,
     "sent_at": "2026-05-17T13:23:47.140762"
+  },
+  {
+    "id": "1462-E1",
+    "name": "Close Tuples (easy version)",
+    "rating": 1500,
+    "sent_at": "2026-05-18T15:36:12.688009"
+  },
+  {
+    "id": "231-B",
+    "name": "Magic, Wizardry and Wonders",
+    "rating": 1500,
+    "sent_at": "2026-05-18T15:36:12.688018"
   }
 ]
