@@ -526,5 +526,17 @@
     "name": "Uniqueness",
     "rating": 1500,
     "sent_at": "2026-05-20T15:24:01.346217"
+  },
+  {
+    "id": "91-A",
+    "name": "Newspaper Headline",
+    "rating": 1500,
+    "sent_at": "2026-05-21T15:30:18.322066"
+  },
+  {
+    "id": "1506-E",
+    "name": "Restoring the Permutation",
+    "rating": 1500,
+    "sent_at": "2026-05-21T15:30:18.322078"
   }
 ]
