@@ -538,5 +538,17 @@
     "name": "Restoring the Permutation",
     "rating": 1500,
     "sent_at": "2026-05-21T15:30:18.322078"
+  },
+  {
+    "id": "340-D",
+    "name": "Bubble Sort Graph",
+    "rating": 1500,
+    "sent_at": "2026-05-22T14:42:25.762996"
+  },
+  {
+    "id": "1114-B",
+    "name": "Yet Another Array Partitioning Task",
+    "rating": 1500,
+    "sent_at": "2026-05-22T14:42:25.763005"
   }
 ]
