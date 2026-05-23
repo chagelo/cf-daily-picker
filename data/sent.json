@@ -550,5 +550,17 @@
     "name": "Yet Another Array Partitioning Task",
     "rating": 1500,
     "sent_at": "2026-05-22T14:42:25.763005"
+  },
+  {
+    "id": "1256-D",
+    "name": "Binary String Minimizing",
+    "rating": 1500,
+    "sent_at": "2026-05-23T13:28:03.022821"
+  },
+  {
+    "id": "2008-E",
+    "name": "Alternating String",
+    "rating": 1500,
+    "sent_at": "2026-05-23T13:28:03.022832"
   }
 ]
