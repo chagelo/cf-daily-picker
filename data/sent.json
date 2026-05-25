@@ -574,5 +574,17 @@
     "name": "Minimize the error",
     "rating": 1500,
     "sent_at": "2026-05-24T13:28:48.953661"
+  },
+  {
+    "id": "710-C",
+    "name": "Magic Odd Square",
+    "rating": 1500,
+    "sent_at": "2026-05-25T14:56:40.213935"
+  },
+  {
+    "id": "1482-B",
+    "name": "Restore Modulo",
+    "rating": 1500,
+    "sent_at": "2026-05-25T14:56:40.213944"
   }
 ]
