@@ -586,5 +586,17 @@
     "name": "Restore Modulo",
     "rating": 1500,
     "sent_at": "2026-05-25T14:56:40.213944"
+  },
+  {
+    "id": "1326-D1",
+    "name": "Prefix-Suffix Palindrome (Easy version)",
+    "rating": 1500,
+    "sent_at": "2026-05-26T15:32:46.883548"
+  },
+  {
+    "id": "997-A",
+    "name": "Convert to Ones",
+    "rating": 1500,
+    "sent_at": "2026-05-26T15:32:46.883557"
   }
 ]
