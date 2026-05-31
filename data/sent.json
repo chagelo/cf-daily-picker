@@ -646,5 +646,17 @@
     "name": "Quests",
     "rating": 1500,
     "sent_at": "2026-05-30T13:42:19.362043"
+  },
+  {
+    "id": "18-A",
+    "name": "Triangle",
+    "rating": 1500,
+    "sent_at": "2026-05-31T13:47:30.024313"
+  },
+  {
+    "id": "1997-D",
+    "name": "Maximize the Root",
+    "rating": 1500,
+    "sent_at": "2026-05-31T13:47:30.024322"
   }
 ]
