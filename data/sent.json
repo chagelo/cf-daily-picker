@@ -658,5 +658,17 @@
     "name": "Maximize the Root",
     "rating": 1500,
     "sent_at": "2026-05-31T13:47:30.024322"
+  },
+  {
+    "id": "254-B",
+    "name": "Jury Size",
+    "rating": 1500,
+    "sent_at": "2026-06-01T17:41:24.111660"
+  },
+  {
+    "id": "1418-C",
+    "name": "Mortal Kombat Tower",
+    "rating": 1500,
+    "sent_at": "2026-06-01T17:41:24.111671"
   }
 ]
