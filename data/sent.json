@@ -694,5 +694,17 @@
     "name": "The Humanoid",
     "rating": 1500,
     "sent_at": "2026-06-03T16:51:23.571435"
+  },
+  {
+    "id": "1792-C",
+    "name": "Min Max Sort",
+    "rating": 1500,
+    "sent_at": "2026-06-05T14:54:02.147148"
+  },
+  {
+    "id": "855-B",
+    "name": "Marvolo Gaunt's Ring",
+    "rating": 1500,
+    "sent_at": "2026-06-05T14:54:02.147157"
   }
 ]
