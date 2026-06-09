@@ -730,5 +730,17 @@
     "name": "Fun",
     "rating": 1500,
     "sent_at": "2026-06-08T15:54:46.698425"
+  },
+  {
+    "id": "1732-D1",
+    "name": "Balance (Easy version)",
+    "rating": 1500,
+    "sent_at": "2026-06-09T14:56:05.101378"
+  },
+  {
+    "id": "990-C",
+    "name": "Bracket Sequences Concatenation Problem",
+    "rating": 1500,
+    "sent_at": "2026-06-09T14:56:05.101387"
   }
 ]
