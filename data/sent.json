@@ -742,5 +742,17 @@
     "name": "Bracket Sequences Concatenation Problem",
     "rating": 1500,
     "sent_at": "2026-06-09T14:56:05.101387"
+  },
+  {
+    "id": "204-B",
+    "name": "Little Elephant and Cards",
+    "rating": 1500,
+    "sent_at": "2026-06-10T15:37:52.173488"
+  },
+  {
+    "id": "2069-C",
+    "name": "Beautiful Sequence",
+    "rating": 1500,
+    "sent_at": "2026-06-10T15:37:52.173496"
   }
 ]
