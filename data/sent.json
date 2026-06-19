@@ -814,5 +814,17 @@
     "name": "Price Maximization",
     "rating": 1500,
     "sent_at": "2026-06-15T17:16:16.066446"
+  },
+  {
+    "id": "1722-G",
+    "name": "Even-Odd XOR",
+    "rating": 1500,
+    "sent_at": "2026-06-19T15:21:39.287600"
+  },
+  {
+    "id": "724-B",
+    "name": "Batch Sort",
+    "rating": 1500,
+    "sent_at": "2026-06-19T15:21:39.287610"
   }
 ]
