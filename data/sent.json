@@ -826,5 +826,17 @@
     "name": "Batch Sort",
     "rating": 1500,
     "sent_at": "2026-06-19T15:21:39.287610"
+  },
+  {
+    "id": "959-C",
+    "name": "Mahmoud and Ehab and the wrong algorithm",
+    "rating": 1500,
+    "sent_at": "2026-06-20T14:06:30.512262"
+  },
+  {
+    "id": "1283-C",
+    "name": "Friends and Gifts",
+    "rating": 1500,
+    "sent_at": "2026-06-20T14:06:30.512274"
   }
 ]
