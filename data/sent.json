@@ -862,5 +862,17 @@
     "name": "Curiosity Has No Limits",
     "rating": 1500,
     "sent_at": "2026-06-22T17:00:03.030907"
+  },
+  {
+    "id": "771-B",
+    "name": "Bear and Different Names",
+    "rating": 1500,
+    "sent_at": "2026-06-23T14:50:41.884365"
+  },
+  {
+    "id": "550-A",
+    "name": "Two Substrings",
+    "rating": 1500,
+    "sent_at": "2026-06-23T14:50:41.884375"
   }
 ]
