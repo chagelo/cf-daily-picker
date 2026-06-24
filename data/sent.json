@@ -874,5 +874,17 @@
     "name": "Two Substrings",
     "rating": 1500,
     "sent_at": "2026-06-23T14:50:41.884375"
+  },
+  {
+    "id": "1167-D",
+    "name": "Bicolored RBS",
+    "rating": 1500,
+    "sent_at": "2026-06-24T14:32:49.024957"
+  },
+  {
+    "id": "1614-C",
+    "name": "Divan and bitwise operations",
+    "rating": 1500,
+    "sent_at": "2026-06-24T14:32:49.024966"
   }
 ]
