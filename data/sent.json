@@ -910,5 +910,17 @@
     "name": "New Year and Domino",
     "rating": 1500,
     "sent_at": "2026-06-26T14:26:55.182433"
+  },
+  {
+    "id": "1419-D2",
+    "name": "Sage's Birthday (hard version)",
+    "rating": 1500,
+    "sent_at": "2026-06-27T13:45:14.623396"
+  },
+  {
+    "id": "2222-C",
+    "name": "Median Partition",
+    "rating": 1500,
+    "sent_at": "2026-06-27T13:45:14.623406"
   }
 ]
