@@ -1078,5 +1078,17 @@
     "name": "Trains",
     "rating": 1500,
     "sent_at": "2026-07-17T13:40:14.771954"
+  },
+  {
+    "id": "1791-F",
+    "name": "Range Update Point Query",
+    "rating": 1500,
+    "sent_at": "2026-07-18T13:17:22.870774"
+  },
+  {
+    "id": "1296-D",
+    "name": "Fight with Monsters",
+    "rating": 1500,
+    "sent_at": "2026-07-18T13:17:22.870783"
   }
 ]
