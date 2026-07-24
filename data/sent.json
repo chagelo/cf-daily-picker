@@ -1150,5 +1150,17 @@
     "name": "Decrease the Sum of Digits",
     "rating": 1500,
     "sent_at": "2026-07-23T14:01:50.094945"
+  },
+  {
+    "id": "75-B",
+    "name": "Facetook Priority Wall",
+    "rating": 1500,
+    "sent_at": "2026-07-24T13:46:47.202496"
+  },
+  {
+    "id": "746-D",
+    "name": "Green and Black Tea",
+    "rating": 1500,
+    "sent_at": "2026-07-24T13:46:47.202504"
   }
 ]
