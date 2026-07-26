@@ -1162,5 +1162,17 @@
     "name": "Green and Black Tea",
     "rating": 1500,
     "sent_at": "2026-07-24T13:46:47.202504"
+  },
+  {
+    "id": "887-C",
+    "name": "Solution for Cube",
+    "rating": 1500,
+    "sent_at": "2026-07-26T13:23:36.985610"
+  },
+  {
+    "id": "687-A",
+    "name": "NP-Hard Problem",
+    "rating": 1500,
+    "sent_at": "2026-07-26T13:23:36.985619"
   }
 ]
