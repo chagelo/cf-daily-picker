@@ -1174,5 +1174,17 @@
     "name": "NP-Hard Problem",
     "rating": 1500,
     "sent_at": "2026-07-26T13:23:36.985619"
+  },
+  {
+    "id": "2-A",
+    "name": "Winner",
+    "rating": 1500,
+    "sent_at": "2026-07-27T14:35:26.975751"
+  },
+  {
+    "id": "2155-C",
+    "name": "The Ancient Wizards' Capes",
+    "rating": 1500,
+    "sent_at": "2026-07-27T14:35:26.975758"
   }
 ]
