@@ -1282,5 +1282,17 @@
     "name": "Storming Arasaka",
     "rating": 1500,
     "sent_at": "2026-08-04T14:12:54.423255"
+  },
+  {
+    "id": "676-B",
+    "name": "Pyramid of Glasses",
+    "rating": 1500,
+    "sent_at": "2026-08-05T14:09:44.031048"
+  },
+  {
+    "id": "443-B",
+    "name": "Kolya and Tandem Repeat",
+    "rating": 1500,
+    "sent_at": "2026-08-05T14:09:44.031058"
   }
 ]
