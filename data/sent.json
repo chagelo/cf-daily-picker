@@ -1294,5 +1294,17 @@
     "name": "Kolya and Tandem Repeat",
     "rating": 1500,
     "sent_at": "2026-08-05T14:09:44.031058"
+  },
+  {
+    "id": "991-D",
+    "name": "Bishwock",
+    "rating": 1500,
+    "sent_at": "2026-08-06T14:10:36.356623"
+  },
+  {
+    "id": "1466-D",
+    "name": "13th Labour of Heracles",
+    "rating": 1500,
+    "sent_at": "2026-08-06T14:10:36.356634"
   }
 ]
