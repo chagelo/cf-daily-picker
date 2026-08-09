@@ -1330,5 +1330,17 @@
     "name": "Two TVs",
     "rating": 1500,
     "sent_at": "2026-08-08T12:48:49.630625"
+  },
+  {
+    "id": "191-A",
+    "name": "Dynasty Puzzles",
+    "rating": 1500,
+    "sent_at": "2026-08-09T12:51:06.491008"
+  },
+  {
+    "id": "282-C",
+    "name": "XOR and OR",
+    "rating": 1500,
+    "sent_at": "2026-08-09T12:51:06.491017"
   }
 ]
