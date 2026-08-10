@@ -1342,5 +1342,17 @@
     "name": "XOR and OR",
     "rating": 1500,
     "sent_at": "2026-08-09T12:51:06.491017"
+  },
+  {
+    "id": "1542-B",
+    "name": "Plus and Multiply",
+    "rating": 1500,
+    "sent_at": "2026-08-10T13:09:15.743743"
+  },
+  {
+    "id": "1439-A1",
+    "name": "Binary Table (Easy Version)",
+    "rating": 1500,
+    "sent_at": "2026-08-10T13:09:15.743753"
   }
 ]
