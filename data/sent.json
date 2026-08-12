@@ -1366,5 +1366,17 @@
     "name": "Submarine in the Rybinsk Sea (easy edition)",
     "rating": 1500,
     "sent_at": "2026-08-11T13:06:22.982478"
+  },
+  {
+    "id": "1569-C",
+    "name": "Jury Meeting",
+    "rating": 1500,
+    "sent_at": "2026-08-12T13:10:23.198045"
+  },
+  {
+    "id": "1304-C",
+    "name": "Air Conditioner",
+    "rating": 1500,
+    "sent_at": "2026-08-12T13:10:23.198056"
   }
 ]
