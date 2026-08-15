@@ -1402,5 +1402,17 @@
     "name": "Colored Boots",
     "rating": 1500,
     "sent_at": "2026-08-14T13:06:24.241463"
+  },
+  {
+    "id": "50-B",
+    "name": "Choosing Symbol Pairs",
+    "rating": 1500,
+    "sent_at": "2026-08-15T12:37:36.021905"
+  },
+  {
+    "id": "402-C",
+    "name": "Searching for Graph",
+    "rating": 1500,
+    "sent_at": "2026-08-15T12:37:36.021913"
   }
 ]
