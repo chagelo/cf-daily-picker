@@ -1414,5 +1414,17 @@
     "name": "Searching for Graph",
     "rating": 1500,
     "sent_at": "2026-08-15T12:37:36.021913"
+  },
+  {
+    "id": "159-D",
+    "name": "Palindrome pairs",
+    "rating": 1500,
+    "sent_at": "2026-08-16T12:39:38.443156"
+  },
+  {
+    "id": "1340-A",
+    "name": "Nastya and Strange Generator",
+    "rating": 1500,
+    "sent_at": "2026-08-16T12:39:38.443168"
   }
 ]
