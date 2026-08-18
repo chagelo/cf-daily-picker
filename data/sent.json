@@ -1426,5 +1426,17 @@
     "name": "Nastya and Strange Generator",
     "rating": 1500,
     "sent_at": "2026-08-16T12:39:38.443168"
+  },
+  {
+    "id": "130-D",
+    "name": "Exponentiation",
+    "rating": 1500,
+    "sent_at": "2026-08-18T12:46:37.721850"
+  },
+  {
+    "id": "2232-C2",
+    "name": "Seating Arrangement (Hard Version)",
+    "rating": 1500,
+    "sent_at": "2026-08-18T12:46:37.721862"
   }
 ]
