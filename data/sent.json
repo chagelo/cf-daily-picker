@@ -1438,5 +1438,17 @@
     "name": "Seating Arrangement (Hard Version)",
     "rating": 1500,
     "sent_at": "2026-08-18T12:46:37.721862"
+  },
+  {
+    "id": "884-C",
+    "name": "Bertown Subway",
+    "rating": 1500,
+    "sent_at": "2026-08-19T12:47:44.942397"
+  },
+  {
+    "id": "1051-C",
+    "name": "Vasya and Multisets",
+    "rating": 1500,
+    "sent_at": "2026-08-19T12:47:44.942408"
   }
 ]
