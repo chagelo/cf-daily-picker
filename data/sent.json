@@ -1450,5 +1450,11 @@
     "name": "Vasya and Multisets",
     "rating": 1500,
     "sent_at": "2026-08-19T12:47:44.942408"
+  },
+  {
+    "id": "901-A",
+    "name": "Hashing Trees",
+    "rating": 1500,
+    "sent_at": "2026-08-20T12:52:06.338107"
   }
 ]
