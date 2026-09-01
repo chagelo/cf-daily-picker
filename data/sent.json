@@ -1576,5 +1576,17 @@
     "name": "AGAGA XOOORRR",
     "rating": 1500,
     "sent_at": "2026-08-31T18:53:04.536970"
+  },
+  {
+    "id": "2234-D",
+    "name": "XOR, Expression and Two Binary Numbers",
+    "rating": 1500,
+    "sent_at": "2026-09-01T16:10:38.275118"
+  },
+  {
+    "id": "1287-B",
+    "name": "Hyperset",
+    "rating": 1500,
+    "sent_at": "2026-09-01T16:10:38.275127"
   }
 ]
