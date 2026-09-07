@@ -1648,5 +1648,17 @@
     "name": "Lunar New Year and a Wander",
     "rating": 1500,
     "sent_at": "2026-09-06T15:02:43.955070"
+  },
+  {
+    "id": "2057-C",
+    "name": "Trip to the Olympiad",
+    "rating": 1500,
+    "sent_at": "2026-09-07T17:23:52.666566"
+  },
+  {
+    "id": "770-C",
+    "name": "Online Courses In BSU",
+    "rating": 1500,
+    "sent_at": "2026-09-07T17:23:52.666577"
   }
 ]
