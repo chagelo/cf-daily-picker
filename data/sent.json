@@ -1684,5 +1684,17 @@
     "name": "Decidophobia",
     "rating": 1500,
     "sent_at": "2026-09-09T16:04:01.840086"
+  },
+  {
+    "id": "576-A",
+    "name": "Vasya and Petya's Game",
+    "rating": 1500,
+    "sent_at": "2026-09-10T15:56:44.333615"
+  },
+  {
+    "id": "1744-E1",
+    "name": "Divisible Numbers (easy version)",
+    "rating": 1500,
+    "sent_at": "2026-09-10T15:56:44.333626"
   }
 ]
