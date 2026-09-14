@@ -1732,5 +1732,17 @@
     "name": "Devyatkino",
     "rating": 1500,
     "sent_at": "2026-09-13T15:44:11.476506"
+  },
+  {
+    "id": "1211-B",
+    "name": "Traveling Around the Golden Ring of Berland",
+    "rating": 1500,
+    "sent_at": "2026-09-14T17:50:00.449946"
+  },
+  {
+    "id": "22-B",
+    "name": "Bargaining Table",
+    "rating": 1500,
+    "sent_at": "2026-09-14T17:50:00.449955"
   }
 ]
