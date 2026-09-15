@@ -1744,5 +1744,17 @@
     "name": "Bargaining Table",
     "rating": 1500,
     "sent_at": "2026-09-14T17:50:00.449955"
+  },
+  {
+    "id": "580-B",
+    "name": "Kefa and Company",
+    "rating": 1500,
+    "sent_at": "2026-09-15T16:26:03.481377"
+  },
+  {
+    "id": "630-K",
+    "name": "Indivisibility",
+    "rating": 1500,
+    "sent_at": "2026-09-15T16:26:03.481388"
   }
 ]
