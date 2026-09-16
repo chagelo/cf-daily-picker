@@ -1756,5 +1756,17 @@
     "name": "Indivisibility",
     "rating": 1500,
     "sent_at": "2026-09-15T16:26:03.481388"
+  },
+  {
+    "id": "178-D1",
+    "name": "Magic Squares",
+    "rating": 1500,
+    "sent_at": "2026-09-16T16:17:13.608195"
+  },
+  {
+    "id": "530-C",
+    "name": "Diophantine equation",
+    "rating": 1500,
+    "sent_at": "2026-09-16T16:17:13.608206"
   }
 ]
