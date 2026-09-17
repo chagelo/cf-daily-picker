@@ -1768,5 +1768,17 @@
     "name": "Diophantine equation",
     "rating": 1500,
     "sent_at": "2026-09-16T16:17:13.608206"
+  },
+  {
+    "id": "1676-H2",
+    "name": "Maximum Crossings (Hard Version)",
+    "rating": 1500,
+    "sent_at": "2026-09-17T16:24:36.595758"
+  },
+  {
+    "id": "821-C",
+    "name": "Okabe and Boxes",
+    "rating": 1500,
+    "sent_at": "2026-09-17T16:24:36.595768"
   }
 ]
