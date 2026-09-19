@@ -1792,5 +1792,17 @@
     "name": "Magic Powder - 2",
     "rating": 1500,
     "sent_at": "2026-09-18T15:58:05.016588"
+  },
+  {
+    "id": "2146-D1",
+    "name": "Max Sum OR (Easy Version)",
+    "rating": 1500,
+    "sent_at": "2026-09-19T15:30:11.991689"
+  },
+  {
+    "id": "455-A",
+    "name": "Boredom",
+    "rating": 1500,
+    "sent_at": "2026-09-19T15:30:11.991698"
   }
 ]
