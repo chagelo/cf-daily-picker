@@ -1828,5 +1828,17 @@
     "name": "Встреча полуконей",
     "rating": 1500,
     "sent_at": "2026-09-21T17:56:58.719857"
+  },
+  {
+    "id": "1616-C",
+    "name": "Representative Edges",
+    "rating": 1500,
+    "sent_at": "2026-09-22T16:25:51.313949"
+  },
+  {
+    "id": "496-C",
+    "name": "Removing Columns",
+    "rating": 1500,
+    "sent_at": "2026-09-22T16:25:51.313960"
   }
 ]
