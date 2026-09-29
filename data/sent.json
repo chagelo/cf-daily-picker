@@ -1912,5 +1912,17 @@
     "name": "Woodcutters",
     "rating": 1500,
     "sent_at": "2026-09-28T19:20:36.240350"
+  },
+  {
+    "id": "2093-E",
+    "name": "Min Max MEX",
+    "rating": 1500,
+    "sent_at": "2026-09-29T17:46:39.482819"
+  },
+  {
+    "id": "1765-N",
+    "name": "Number Reduction",
+    "rating": 1500,
+    "sent_at": "2026-09-29T17:46:39.482828"
   }
 ]
