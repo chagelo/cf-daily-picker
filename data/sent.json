@@ -1924,5 +1924,17 @@
     "name": "Number Reduction",
     "rating": 1500,
     "sent_at": "2026-09-29T17:46:39.482828"
+  },
+  {
+    "id": "2228-C1",
+    "name": "Cirno and Number (Easy Version)",
+    "rating": 1500,
+    "sent_at": "2026-09-30T17:42:53.672147"
+  },
+  {
+    "id": "1999-G1",
+    "name": "Ruler (easy version)",
+    "rating": 1500,
+    "sent_at": "2026-09-30T17:42:53.672158"
   }
 ]
