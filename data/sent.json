@@ -1936,5 +1936,17 @@
     "name": "Ruler (easy version)",
     "rating": 1500,
     "sent_at": "2026-09-30T17:42:53.672158"
+  },
+  {
+    "id": "985-C",
+    "name": "Liebig's Barrels",
+    "rating": 1500,
+    "sent_at": "2026-10-01T18:07:58.588994"
+  },
+  {
+    "id": "278-B",
+    "name": "New Problem",
+    "rating": 1500,
+    "sent_at": "2026-10-01T18:07:58.589002"
   }
 ]
