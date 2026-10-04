@@ -1972,5 +1972,17 @@
     "name": "Potions (Easy Version)",
     "rating": 1500,
     "sent_at": "2026-10-03T15:50:27.275944"
+  },
+  {
+    "id": "2225-D",
+    "name": "Exceptional Segments",
+    "rating": 1500,
+    "sent_at": "2026-10-04T16:32:31.322526"
+  },
+  {
+    "id": "2053-C",
+    "name": "Bewitching Stargazer",
+    "rating": 1500,
+    "sent_at": "2026-10-04T16:32:31.322536"
   }
 ]
