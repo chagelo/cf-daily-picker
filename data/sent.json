@@ -2068,5 +2068,17 @@
     "name": "Find the Car",
     "rating": 1500,
     "sent_at": "2026-10-12T20:59:26.052536"
+  },
+  {
+    "id": "1323-B",
+    "name": "Count Subrectangles",
+    "rating": 1500,
+    "sent_at": "2026-10-13T18:57:52.380078"
+  },
+  {
+    "id": "354-A",
+    "name": "Vasya and Robot",
+    "rating": 1500,
+    "sent_at": "2026-10-13T18:57:52.380088"
   }
 ]
