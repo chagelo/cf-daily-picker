@@ -2092,5 +2092,17 @@
     "name": "War Strategy",
     "rating": 1500,
     "sent_at": "2026-10-14T16:41:10.262345"
+  },
+  {
+    "id": "1611-D",
+    "name": "Weights Assignment For Tree Edges",
+    "rating": 1500,
+    "sent_at": "2026-10-15T16:26:46.572654"
+  },
+  {
+    "id": "1950-E",
+    "name": "Nearly Shortest Repeating Substring",
+    "rating": 1500,
+    "sent_at": "2026-10-15T16:26:46.572668"
   }
 ]
