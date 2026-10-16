@@ -2104,5 +2104,17 @@
     "name": "Nearly Shortest Repeating Substring",
     "rating": 1500,
     "sent_at": "2026-10-15T16:26:46.572668"
+  },
+  {
+    "id": "864-C",
+    "name": "Bus",
+    "rating": 1500,
+    "sent_at": "2026-10-16T16:12:19.019827"
+  },
+  {
+    "id": "130-C",
+    "name": "Decimal sum",
+    "rating": 1500,
+    "sent_at": "2026-10-16T16:12:19.019834"
   }
 ]
