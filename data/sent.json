@@ -2188,5 +2188,17 @@
     "name": "Turtle vs. Rabbit Race: Optimal Trainings",
     "rating": 1500,
     "sent_at": "2026-10-22T16:44:54.904982"
+  },
+  {
+    "id": "1490-F",
+    "name": "Equalize the Array",
+    "rating": 1500,
+    "sent_at": "2026-10-23T16:35:59.033092"
+  },
+  {
+    "id": "271-C",
+    "name": "Secret",
+    "rating": 1500,
+    "sent_at": "2026-10-23T16:35:59.033102"
   }
 ]
