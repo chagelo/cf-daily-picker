@@ -2272,5 +2272,17 @@
     "name": "Resort",
     "rating": 1500,
     "sent_at": "2026-10-29T18:07:16.937797"
+  },
+  {
+    "id": "1313-C1",
+    "name": "Skyscrapers (easy version)",
+    "rating": 1500,
+    "sent_at": "2026-10-30T17:46:45.032542"
+  },
+  {
+    "id": "743-C",
+    "name": "Vladik and fractions",
+    "rating": 1500,
+    "sent_at": "2026-10-30T17:46:45.032554"
   }
 ]
