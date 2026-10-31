@@ -2284,5 +2284,17 @@
     "name": "Vladik and fractions",
     "rating": 1500,
     "sent_at": "2026-10-30T17:46:45.032554"
+  },
+  {
+    "id": "1389-C",
+    "name": "Good String",
+    "rating": 1500,
+    "sent_at": "2026-10-31T16:55:24.326792"
+  },
+  {
+    "id": "1552-B",
+    "name": "Running for Gold",
+    "rating": 1500,
+    "sent_at": "2026-10-31T16:55:24.326801"
   }
 ]
