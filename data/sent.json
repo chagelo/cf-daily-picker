@@ -2356,5 +2356,17 @@
     "name": "History",
     "rating": 1500,
     "sent_at": "2026-11-05T19:36:40.769137"
+  },
+  {
+    "id": "1196-D1",
+    "name": "RGB Substring (easy version)",
+    "rating": 1500,
+    "sent_at": "2026-11-06T18:58:18.472105"
+  },
+  {
+    "id": "460-B",
+    "name": "Little Dima and Equation",
+    "rating": 1500,
+    "sent_at": "2026-11-06T18:58:18.472116"
   }
 ]
