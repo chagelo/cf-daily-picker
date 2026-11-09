@@ -2392,5 +2392,17 @@
     "name": "Square and Rectangles",
     "rating": 1500,
     "sent_at": "2026-11-08T17:42:05.005417"
+  },
+  {
+    "id": "1352-E",
+    "name": "Special Elements",
+    "rating": 1500,
+    "sent_at": "2026-11-09T21:59:43.108986"
+  },
+  {
+    "id": "1397-B",
+    "name": "Power Sequence",
+    "rating": 1500,
+    "sent_at": "2026-11-09T21:59:43.108997"
   }
 ]
