@@ -2404,5 +2404,17 @@
     "name": "Power Sequence",
     "rating": 1500,
     "sent_at": "2026-11-09T21:59:43.108997"
+  },
+  {
+    "id": "1740-D",
+    "name": "Knowledge Cards",
+    "rating": 1500,
+    "sent_at": "2026-11-10T19:24:59.000389"
+  },
+  {
+    "id": "1738-C",
+    "name": "Even Number Addicts",
+    "rating": 1500,
+    "sent_at": "2026-11-10T19:24:59.000399"
   }
 ]
