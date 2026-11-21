@@ -2524,5 +2524,17 @@
     "name": "Almost Arithmetical Progression",
     "rating": 1500,
     "sent_at": "2026-11-20T19:40:57.656072"
+  },
+  {
+    "id": "166-C",
+    "name": "Median",
+    "rating": 1500,
+    "sent_at": "2026-11-21T18:46:26.719548"
+  },
+  {
+    "id": "1296-C",
+    "name": "Yet Another Walking Robot",
+    "rating": 1500,
+    "sent_at": "2026-11-21T18:46:26.719559"
   }
 ]
