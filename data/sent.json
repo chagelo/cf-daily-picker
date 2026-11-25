@@ -2572,5 +2572,17 @@
     "name": "Ultimate Value",
     "rating": 1500,
     "sent_at": "2026-11-24T21:59:01.950995"
+  },
+  {
+    "id": "2254-E",
+    "name": "Chronostasis",
+    "rating": 1500,
+    "sent_at": "2026-11-25T21:10:35.255507"
+  },
+  {
+    "id": "121-B",
+    "name": "Lucky Transformation",
+    "rating": 1500,
+    "sent_at": "2026-11-25T21:10:35.255516"
   }
 ]
