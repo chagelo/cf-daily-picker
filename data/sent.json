@@ -2584,5 +2584,17 @@
     "name": "Lucky Transformation",
     "rating": 1500,
     "sent_at": "2026-11-25T21:10:35.255516"
+  },
+  {
+    "id": "1873-G",
+    "name": "ABBC or BACB",
+    "rating": 1500,
+    "sent_at": "2026-11-26T21:00:33.173672"
+  },
+  {
+    "id": "1368-B",
+    "name": "Codeforces Subsequences",
+    "rating": 1500,
+    "sent_at": "2026-11-26T21:00:33.173682"
   }
 ]
