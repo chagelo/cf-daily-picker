@@ -2596,5 +2596,17 @@
     "name": "Codeforces Subsequences",
     "rating": 1500,
     "sent_at": "2026-11-26T21:00:33.173682"
+  },
+  {
+    "id": "2137-E",
+    "name": "Mexification",
+    "rating": 1500,
+    "sent_at": "2026-11-27T20:45:53.391888"
+  },
+  {
+    "id": "2253-C",
+    "name": "Sum of Distinct Values in a Matrix",
+    "rating": 1500,
+    "sent_at": "2026-11-27T20:45:53.391899"
   }
 ]
